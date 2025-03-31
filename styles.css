@@ -1,0 +1,314 @@
+/* Variables de color */
+:root {
+    --azul-institucional: #0056b3;
+    --azul-oscuro: #003366;
+    --gris-oscuro: #333;
+    --gris-medio: #777;
+    --gris-claro: #f5f5f5;
+    --blanco: #fff;
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--gris-oscuro);
+    background-color: var(--blanco);
+}
+
+.container-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header-area {
+    position: relative;
+    padding-top: 20px;
+    min-height: 180px;
+}
+
+.logo {
+    height: 150px;
+    position: absolute;
+    left: 20px;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.logo-text-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--azul-institucional);
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+
+.subtitle {
+    color: #202020ce;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.main-nav {
+    background-color: rgb(32, 44, 86);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 180px;
+}
+
+.main-nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 3px;
+}
+
+/* Contenido principal */
+.content-container {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0 40px;
+}
+
+.main-content {
+    flex: 3;
+}
+
+/* Sidebar con botones */
+.sidebar {
+    flex: 1;
+    background-color: var(--gris-claro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.button-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-btn {
+    display: block;
+    padding: 12px 15px;
+    background-color: var(--azul-institucional);
+    color: white !important;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid var(--azul-institucional);
+}
+
+.sidebar-btn:hover {
+    background-color: var(--azul-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Carrusel */
+.carousel-fixed {
+    position: relative;
+    height: 500px;
+    background-color: #f0f0f0;
+    margin: 30px 0 2rem;
+}
+
+.carousel-fixed .image-container {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.carousel-fixed img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 86, 179, 0.7);
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    border-radius: 50%;
+    opacity: 0.9;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+
+.boton-carrusel {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(122, 122, 120, 0.6);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Elementos adicionales */
+.imgs-aviso {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.imgs-aviso img {
+    width: 350px;
+    height: 150px;
+    object-fit: contain;
+    background-color: var(--gris-claro);
+    padding: 5px;
+}
+
+.info-box {
+    background-color: var(--gris-claro);
+    border-left: 4px solid var(--azul-institucional);
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.main-footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--gris-medio);
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .logo { height: 130px; }
+    h1 { font-size: 2.2rem; }
+    .subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 992px) {
+    .header-area {
+        padding-top: 100px;
+        min-height: auto;
+        text-align: center;
+    }
+    .logo {
+        position: static;
+        transform: none;
+        margin: 0 auto 15px;
+        height: 120px;
+    }
+    .logo-text-container {
+        position: static;
+        transform: none;
+        margin: 0 auto 20px;
+    }
+    .main-nav {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .content-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .button-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-area { padding-top: 80px; }
+    .logo { height: 100px; }
+    h1 { font-size: 1.8rem; }
+    .subtitle { font-size: 1rem; }
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+    .carousel-fixed,
+    .carousel-fixed .image-container {
+        height: 300px;
+    }
+    .imgs-aviso {
+        flex-direction: column;
+    }
+    .imgs-aviso img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 1.5rem; }
+    .subtitle { font-size: 0.9rem; }
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .carousel-fixed,
+    .carousel-fixed .image-container {
+        height: 200px;
+    }
+    .button-links {
+        grid-template-columns: 1fr;
+    }
+    .sidebar-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
